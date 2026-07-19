@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ma Feuille de Route — EiJV Saint-Quentin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">EiJV</span>
+      <div class="brand-text">
+        <strong>Ma feuille de route</strong>
+        <small>Logistique Innovante · Saint-Quentin · 2026/2027</small>
+      </div>
+    </div>
+    <div class="progress-widget" aria-label="Progression globale">
+      <svg class="progress-ring" width="52" height="52" viewBox="0 0 52 52">
+        <circle class="progress-ring__track" cx="26" cy="26" r="22"></circle>
+        <circle class="progress-ring__fill" id="progressRingFill" cx="26" cy="26" r="22"></circle>
+      </svg>
+      <span class="progress-value" id="progressValue">0%</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <span class="eyebrow">Maroc → France · Rentrée 2026</span>
+      <h1>De chez vous à<br>Saint-Quentin.</h1>
+      <p class="hero-text">Toutes les démarches administratives à effectuer, dans l'ordre, pour rejoindre l'École d'Ingénieurs Jules Verne — tirées exclusivement des documents officiels de l'école.</p>
+
+      <!-- Signature element : carte d'embarquement -->
+      <div class="boarding-card">
+        <div class="boarding-stub">
+          <span class="boarding-eyebrow">Départ</span>
+          <span class="boarding-code">MAR</span>
+          <span class="boarding-city">Maroc</span>
+        </div>
+        <div class="boarding-path">
+          <div class="boarding-dashes"></div>
+          <i class="fa-solid fa-plane boarding-plane" id="boardingPlane"></i>
+        </div>
+        <div class="boarding-stub boarding-stub--right">
+          <span class="boarding-eyebrow">Arrivée</span>
+          <span class="boarding-code">EIJV</span>
+          <span class="boarding-city">Saint-Quentin</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STEPPER / PARCOURS ===================== -->
+  <nav class="stepper" id="stepper" aria-label="Étapes du parcours">
+    <!-- généré en JS -->
+  </nav>
+
+  <!-- ===================== CHECKLIST ===================== -->
+  <section class="checklist-section" id="checklist" data-reveal>
+    <div class="section-head">
+      <span class="eyebrow" id="phaseEyebrow">Étape</span>
+      <h2 id="phaseTitle">Titre de la phase</h2>
+      <p id="phaseSubtitle">Sous-titre</p>
+    </div>
+    <div class="checklist-list" id="checklistList"></div>
+  </section>
+
+  <!-- ===================== CALENDRIER ===================== -->
+  <section class="calendar-section" data-reveal>
+    <div class="section-head">
+      <span class="eyebrow">Chronologie</span>
+      <h2>Le calendrier officiel</h2>
+      <p>Naviguez mois par mois — les jours marqués correspondent à une échéance des documents.</p>
+    </div>
+
+    <div class="calendar-months" id="calendarMonths"></div>
+
+    <div class="calendar-wrap">
+      <div class="calendar-grid" id="calendarGrid"></div>
+      <div class="calendar-events" id="calendarEvents"></div>
+    </div>
+  </section>
+
+  <!-- ===================== À NE PAS OUBLIER ===================== -->
+  <section class="warnings-section" data-reveal>
+    <div class="section-head section-head--light">
+      <span class="eyebrow">Vigilance</span>
+      <h2>Éléments à ne pas oublier</h2>
+      <p>Les points de blocage les plus fréquents, relevés dans les documents officiels.</p>
+    </div>
+    <div class="warnings-grid" id="warningsGrid"></div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark brand-mark--light">EiJV</span>
+      <p>École d'Ingénieurs Jules Verne — Université de Picardie Jules Verne</p>
+    </div>
+    <div class="footer-contacts">
+      <div>
+        <strong>Scolarité Saint-Quentin</strong>
+        <span>5 allée Marguerite Yourcenar, 02100 Saint-Quentin</span>
+        <span>eijv@u-picardie.fr · 03 22 82 70 30</span>
+      </div>
+      <div>
+        <strong>Bureau Bienvenue en France</strong>
+        <span>Pôle OFRE, 10 rue Frédéric Petit, Amiens</span>
+        <span>bienvenue@u-picardie.fr</span>
+      </div>
+    </div>
+  </div>
+  <p class="footer-note">Contenu établi strictement à partir des documents officiels EiJV / UPJV — Rentrée 2026/2027.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
